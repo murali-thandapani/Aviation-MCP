@@ -1,0 +1,63 @@
+# ============================================================
+# Aviation MCP Multi-Agent System — Python Dependencies
+# ============================================================
+# Python version : 3.10+  (tested on 3.12.3)
+# Generated      : 2026-04-18
+#
+# Install:
+#   pip install -r requirements.txt
+#
+# ============================================================
+# DIRECT DEPENDENCIES
+# ============================================================
+
+# Flask — WSGI micro web framework
+# Used by: mcp_server.py
+# Why: HTTP routing, request parsing (request.get_json),
+#      JSON responses (jsonify), route decorators (@app.route).
+Flask==3.1.3
+
+# Flask-CORS — Cross-Origin Resource Sharing extension
+# Used by: mcp_server.py
+# Why: Adds Access-Control-Allow-Origin headers so a browser-based
+#      frontend on a different port can call the API without being
+#      blocked by the Same-Origin Policy.
+Flask-Cors==6.0.2
+
+# ============================================================
+# STANDARD LIBRARY MODULES (no install needed — listed for reference)
+# ============================================================
+#
+# sqlite3   — embedded relational DB used by agent2_flight.py
+# re        — regex engine used by router_agent.py and agent2_flight.py
+# os        — path resolution used by all modules
+# importlib — dynamic module loading used by agent_registry.py
+# inspect   — handler validation used by agent_registry.py
+# logging   — structured logging used by agent_registry.py
+# datetime  — UTC timestamps used by router_agent.py
+# json      — serialisation used in __main__ demo blocks
+# sys       — sys.exit() used by mcp_server.py startup check
+#
+# All of the above ship with CPython 3.10+ — no pip install required.
+
+# ============================================================
+# TRANSITIVE DEPENDENCIES (pinned for reproducibility)
+# ============================================================
+
+# Werkzeug — WSGI utilities (Flask dependency)
+Werkzeug==3.1.7
+
+# Jinja2 — templating engine (Flask dependency)
+Jinja2==3.1.6
+
+# MarkupSafe — safe string handling (Jinja2 dependency)
+MarkupSafe==3.0.3
+
+# Click — CLI toolkit (Flask dependency, powers `flask run`)
+click==8.3.1
+
+# itsdangerous — cryptographic signing (Flask dependency)
+itsdangerous==2.2.0
+
+# blinker — signals support (Flask dependency)
+blinker==1.9.0
